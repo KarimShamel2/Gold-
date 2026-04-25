@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#e9c176",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "on-primary-container": "#4e3700",
+                    "on-background": "#1b1c18",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad4",
+                    "surface-container": "#f0eee8",
+                    "tertiary": "#5f5e5e",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "secondary-fixed": "#e3e2e0",
+                    "surface-tint": "#775a19",
+                    "on-surface-variant": "#4e4639",
+                    "primary-fixed": "#ffdea5",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "tertiary-container": "#a7a5a5",
+                    "primary-container": "#c5a059",
+                    "on-surface": "#1b1c18",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#261900",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#d1c5b4",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#30312d",
+                    "inverse-on-surface": "#f3f1eb",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "surface-bright": "#fbf9f3",
+                    "on-secondary-fixed-variant": "#464746",
+                    "inverse-primary": "#e9c176",
+                    "on-tertiary-container": "#3b3b3b",
+                    "surface": "#fbf9f3",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "primary": "#775a19",
+                    "surface-variant": "#e4e2dc",
+                    "surface-container-high": "#eae8e2",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#626361",
+                    "secondary": "#5e5e5d",
+                    "outline": "#7f7667",
+                    "background": "#fbf9f3",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e4e2dc",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "surface-container-low": "#f6f3ed",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#e0dfde"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Noto Serif"],
+                    "headline-sm": ["Noto Serif"],
+                    "price-display": ["Manrope"],
+                    "display-lg": ["Noto Serif"],
+                    "label-caps": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "price-display": ["20px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        input:focus, select:focus {
+            outline: none !important;
+            border-bottom-color: #775a19 !important;
+            box-shadow: none !important;
+        }
+        .custom-shadow {
+            box-shadow: 0 30px 60px -12px rgba(119, 90, 25, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-[#fbf9f3] dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 sticky top-0 z-50">
+<div class="flex justify-between items-center h-20 px-12 max-w-[1440px] mx-auto w-full">
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex gap-6">
+<div class=\"relative group h-full flex items-center\"><a class=\"text-stone-600 dark:text-stone-400 font-['Manrope'] text-xs tracking-widest hover:text-[#775a19] transition-colors duration-300 uppercase\" href=\"../catalog/collections.html\">COLLECTIONS</a><div class=\"absolute top-full left-0 w-[800px] bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-50 p-10 flex gap-12\"><div class=\"flex gap-16\"><div><h3 class=\"text-sm font-serif text-[#775a19] mb-6 uppercase tracking-widest\">Category</h3><ul class=\"flex flex-col space-y-3\"><li><a href=\"../catalog/collections.html\" class=\"text-xs text-gray-500 hover:text-[#775a19] transition uppercase tracking-widest\">Rings</a></li><li><a href=\"../catalog/collections.html\" class=\"text-xs text-gray-500 hover:text-[#775a19] transition uppercase tracking-widest\">Earrings</a></li><li><a href=\"../catalog/collections.html\" class=\"text-xs text-gray-500 hover:text-[#775a19] transition uppercase tracking-widest\">Necklaces</a></li><li><a href=\"../catalog/collections.html\" class=\"text-xs text-gray-500 hover:text-[#775a19] transition uppercase tracking-widest\">Bracelets</a></li></ul></div><div><h3 class=\"text-sm font-serif text-[#775a19] mb-6 uppercase tracking-widest\">Curated</h3><ul class=\"flex flex-col space-y-3\"><li><a href=\"../catalog/collections.html\" class=\"text-xs text-gray-500 hover:text-[#775a19] transition uppercase tracking-widest\">Initial Necklaces</a></li><li><a href=\"../catalog/collections.html\" class=\"text-xs text-gray-500 hover:text-[#775a19] transition uppercase tracking-widest\">Office Baddie</a></li><li><a href=\"../catalog/collections.html\" class=\"text-xs text-gray-500 hover:text-[#775a19] transition uppercase tracking-widest\">Egyptian Spirits</a></li><li class=\"pt-2\"><a href=\"../catalog/collections.html\" class=\"text-xs text-[#775a19] border-b border-[#775a19]/30 pb-1 hover:border-[#775a19] transition uppercase tracking-widest\">All Jewelry</a></li></ul></div></div><div class=\"grid grid-cols-3 gap-4 flex-1\"><div class=\"group/card cursor-pointer\" onclick=\"window.location.href='../catalog/product.html'\"><div class=\"aspect-[4/5] overflow-hidden bg-[#f8f8f8] mb-3\"><img src=\"https://lh3.googleusercontent.com/aida-public/AB6AXuCtXlVeqXRnZoSH2ZOpCaTOLoUvjs-kihb6umOxO_b36ltj_-LbzYQOsLZdb8OK1usAJ5DCNwqi-SA3guQ0LlgMssdPYZiQAu7pdJhmmpqMrhXIRIfmpnUc3g-_UrXzftY7AYPs1PiTyTe7D9Byv3HNEc7HYDuwF1BPrnrccjQNHYR_9SGU3N-bwX61mXSfyjh1huk_SfaJHETW0OYizW6vx3lVygUUOLvMUYMip8o0uK-dQbt35Q4dDbcJU-3HnFQLwx0Rt-6rWRU\" class=\"w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110\"/></div><p class=\"text-[10px] tracking-widest text-gray-400 uppercase mb-1\">New Arrival</p><p class=\"text-sm text-gray-800\">The Solstice Ring</p></div><div class=\"group/card cursor-pointer\" onclick=\"window.location.href='../catalog/product.html'\"><div class=\"aspect-[4/5] overflow-hidden bg-[#f8f8f8] mb-3\"><img src=\"https://lh3.googleusercontent.com/aida-public/AB6AXuB5ktgza1SoynC6qvsfo4OuaCX9rJner9-gPlt_8Yg2OLHFDVlKhqcwdm62wixWEnI26DI7PyEuZeWw9PAiko2-5rhxClI9GKyg0RyDWcK1V1jnJ9j5iamL26hFhgm9oo6EKXXeZYybC3iwaMUFNzFSB0jku_U_ROc2BZGRy8HMykVidUXLw3xMNAHe0A_UIDE-_EuuToa6rYlxEPWwGS2TT4X3tA5PSw5QvCo8z3YL4cC8lUeLnD-vDtvp-qF4nTdJcifIgm8G3ig\" class=\"w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110\"/></div><p class=\"text-[10px] tracking-widest text-gray-400 uppercase mb-1\">Bestseller</p><p class=\"text-sm text-gray-800\">Dune Hoops</p></div><div class=\"group/card cursor-pointer\" onclick=\"window.location.href='../catalog/product.html'\"><div class=\"aspect-[4/5] overflow-hidden bg-[#f8f8f8] mb-3\"><img src=\"https://lh3.googleusercontent.com/aida-public/AB6AXuCUYAp5S2DislATEYPDz0Aasb_x_rYSKNnt076yltMCOGyYTBOFKDBhAAanNU4pek1Pe9cQuA4UuY9mqrkwWizfxrNRHPnnDcUCDr1Ld4gNMZRvREgEWryk0DGTVLB5XeuJYFoZcLs2tqsheYN8vzNUbqVhBRqQTY3UWT4mCc2MlY9rKux0m6ao1iK6GGhEkd2YDttHmNqH4iKk8wzmPsysjR0Fbws6OHs6WqrOE6wS9e3MXcoqALJBqzxi9PO_cAFRAZ046LafPLk\" class=\"w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110\"/></div><p class=\"text-[10px] tracking-widest text-gray-400 uppercase mb-1\">Collection</p><p class=\"text-sm text-gray-800\">Egyptian Sun</p></div></div></div></div>
+<a class="text-stone-600 dark:text-stone-400 font-['Manrope'] text-xs tracking-widest hover:text-[#775a19] transition-colors duration-300 uppercase" href="#">BESPOKE</a>
+</nav>
+</div>
+<a class="text-2xl font-serif tracking-[0.2em] text-[#775a19] dark:text-amber-500 font-['Noto_Serif'] font-light uppercase" href="/">AURELIA</a>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-6">
+<a class="text-stone-600 dark:text-stone-400 font-['Manrope'] text-xs tracking-widest hover:text-[#775a19] transition-colors duration-300 uppercase" href="#">HERITAGE</a>
+<a class="text-stone-600 dark:text-stone-400 font-['Manrope'] text-xs tracking-widest hover:text-[#775a19] transition-colors duration-300 uppercase" href="#">BOUTIQUES</a>
+</nav>
+<div class="flex items-center gap-4 text-[#775a19]">
+<span class="material-symbols-outlined cursor-pointer">search</span>
+<span class="material-symbols-outlined cursor-pointer">person</span>
+<span class="material-symbols-outlined cursor-pointer">shopping_bag</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-12 py-16">
+<!-- Checkout Progress -->
+<div class="flex justify-center items-center mb-20 gap-4">
+<span class="font-label-caps text-label-caps text-primary border-b border-primary pb-1">01 INFORMATION</span>
+<div class="w-12 h-[1px] bg-outline-variant"></div>
+<span class="font-label-caps text-label-caps text-tertiary">02 SHIPPING</span>
+<div class="w-12 h-[1px] bg-outline-variant"></div>
+<span class="font-label-caps text-label-caps text-tertiary">03 PAYMENT</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+<!-- Shipping Form Column -->
+<div class="lg:col-span-7">
+<section>
+<h1 class="font-headline-md text-headline-md text-on-surface mb-8">Shipping Information</h1>
+<form class="space-y-10">
+<div class="space-y-8">
+<h2 class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Contact Details</h2>
+<div class="grid grid-cols-1 gap-6">
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-outline uppercase mb-1">Email Address</label>
+<input class="w-full bg-transparent border-b border-[#E5DED0] py-2 font-body-md focus:border-primary transition-colors" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+</div>
+<div class="space-y-8 pt-4">
+<h2 class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Shipping Address</h2>
+<div class="grid grid-cols-2 gap-6">
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-outline uppercase mb-1">First Name</label>
+<input class="w-full bg-transparent border-b border-[#E5DED0] py-2 font-body-md focus:border-primary transition-colors" placeholder="John" type="text"/>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-outline uppercase mb-1">Last Name</label>
+<input class="w-full bg-transparent border-b border-[#E5DED0] py-2 font-body-md focus:border-primary transition-colors" placeholder="Doe" type="text"/>
+</div>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-outline uppercase mb-1">Street Address</label>
+<input class="w-full bg-transparent border-b border-[#E5DED0] py-2 font-body-md focus:border-primary transition-colors" placeholder="Building, Street name" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-outline uppercase mb-1">Governorate</label>
+<select class="w-full bg-transparent border-b border-[#E5DED0] py-2 font-body-md focus:border-primary appearance-none cursor-pointer">
+<option disabled="" selected="" value="">Select Governorate</option>
+<option value="cairo">Cairo</option>
+<option value="giza">Giza</option>
+<option value="alexandria">Alexandria</option>
+<option value="luxor">Luxor</option>
+<option value="aswan">Aswan</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 bottom-2 text-outline pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-outline uppercase mb-1">District</label>
+<select class="w-full bg-transparent border-b border-[#E5DED0] py-2 font-body-md focus:border-primary appearance-none cursor-pointer">
+<option disabled="" selected="" value="">Select District</option>
+<option value="maadi">Maadi</option>
+<option value="zamalek">Zamalek</option>
+<option value="heliopolis">Heliopolis</option>
+<option value="tagamoa">New Cairo</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 bottom-2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-outline uppercase mb-1">Apartment / Suite</label>
+<input class="w-full bg-transparent border-b border-[#E5DED0] py-2 font-body-md focus:border-primary transition-colors" placeholder="Optional" type="text"/>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-[10px] text-outline uppercase mb-1">Phone Number</label>
+<input class="w-full bg-transparent border-b border-[#E5DED0] py-2 font-body-md focus:border-primary transition-colors" placeholder="+20 1XX XXX XXXX" type="tel"/>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-4 font-label-caps text-label-caps tracking-[0.2em] uppercase hover:bg-on-primary-container transition-all duration-300" type="submit">
+                                CONTINUE TO SHIPPING
+                            </button>
+</div>
+</form>
+</section>
+</div>
+<!-- Order Summary Column -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 bg-surface-container-low p-10 custom-shadow border border-surface-variant">
+<h2 class="font-headline-sm text-headline-sm mb-8">Order Summary</h2>
+<div class="space-y-6 mb-8">
+<!-- Product 1 -->
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of a delicate 18k gold necklace with a single diamond pendant on a soft beige silk background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeurJGfgFwImwRe1_BZkYlHM_iT7rSUkYDsUTxUkRAQhR7mPlz-FLD4zffiTNzln3oHqQcx5xCFaqHrKpNa0DCJevHveCSykuQHd04xMMt75kcfBZwXE2v2TmNYYk7rWLztskt3a3D3hIg0xK7Pija6pif_woTndThz0NikZ1PIodJ8vl3Vc36d1xsPyuPzEyqAm95F9eMqN4wbrbvYBT86dZqOCHb4C4iuYwrB3qsLLRCe8iaMHAzH9yLJK5Mi_Iory-PE504tfU"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<p class="font-body-md text-on-surface font-medium uppercase text-xs tracking-wider">AURELIA SOLITAIRE NECKLACE</p>
+<p class="font-label-caps text-[10px] text-tertiary">18K YELLOW GOLD / 0.5CT</p>
+</div>
+<p class="font-price-display text-body-md text-primary">EGP 42,500</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Macro photography of two minimalist gold wedding bands resting on a textured cream stone surface with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdAUxvEBY_KyOJK1HHZyaot_Ja3Ej36LUuP34sO6MPg8U-wR1WSquQlgCudzmXYdHmo3yf5_mdBuO7n4oV8EiIoeH1rybK0fPAoZyZXHim99GDUXiEy4mQZpfdNIOdecf3mkg8K-WZANGOOy4Jgs2-FxqHziSvuqz0f_pnONV0K1ATHPDuuaOq46rhqhguCo6k4pzrbgj-X_ToZrt4VVamObvGDexkaTlSBYC8BKzcGwrPCCubF-U11313pPKV6KrnRTTu15RNZLk"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<p class="font-body-md text-on-surface font-medium uppercase text-xs tracking-wider">ETERNITY BAND SET</p>
+<p class="font-label-caps text-[10px] text-tertiary">18K ROSE GOLD</p>
+</div>
+<p class="font-price-display text-body-md text-primary">EGP 28,000</p>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-6 space-y-4">
+<div class="flex justify-between font-body-md text-on-surface-variant">
+<span class="text-xs tracking-widest uppercase">Subtotal</span>
+<span class="font-price-display">EGP 70,500</span>
+</div>
+<div class="flex justify-between font-body-md text-on-surface-variant">
+<span class="text-xs tracking-widest uppercase">Shipping</span>
+<span class="text-xs uppercase italic">Calculated at next step</span>
+</div>
+<div class="flex justify-between font-body-md pt-4 border-t border-outline-variant">
+<span class="text-sm font-semibold tracking-widest uppercase">Total</span>
+<span class="font-price-display text-headline-sm text-on-surface">EGP 70,500</span>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-3 text-tertiary">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-label-caps text-[10px] tracking-widest">SECURE SSL ENCRYPTED CHECKOUT</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fbf9f3] dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 mt-[120px]">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 px-12 max-w-[1440px] mx-auto w-full">
+<div class="mb-8 md:mb-0">
+<span class="text-lg font-serif tracking-widest text-[#775a19] font-['Noto_Serif']">AURELIA</span>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+<a class="font-['Manrope'] text-[10px] tracking-[0.15em] uppercase text-stone-500 hover:text-[#775a19] transition-colors underline-offset-4 hover:underline" href="#">PRIVACY</a>
+<a class="font-['Manrope'] text-[10px] tracking-[0.15em] uppercase text-stone-500 hover:text-[#775a19] transition-colors underline-offset-4 hover:underline" href="#">TERMS</a>
+<a class="font-['Manrope'] text-[10px] tracking-[0.15em] uppercase text-stone-500 hover:text-[#775a19] transition-colors underline-offset-4 hover:underline" href="#">SHIPPING</a>
+<a class="font-['Manrope'] text-[10px] tracking-[0.15em] uppercase text-stone-500 hover:text-[#775a19] transition-colors underline-offset-4 hover:underline" href="#">CONTACT</a>
+</div>
+<div class="text-stone-500 font-['Manrope'] text-[10px] tracking-[0.15em] uppercase">
+                © 2024 AURELIA. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

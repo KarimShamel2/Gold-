@@ -1,0 +1,4 @@
+/* Minimal Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #f4eee8; font-family: 'Lato', sans-serif; color: #333; }
+.gold-divider { width: 32px; height: 1px; background-color: #C3A36E; }
